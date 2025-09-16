@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
+</head>
+<body>
+
+        
+       
+        
+    </div>
+    <div class="form-space">
+        <div class="para-1">
+            <p>Kindly fill the form below</p>
+        </div>
+        <form action="/send_email" method="post">
+            <div class="name-space">
+                <input type="text"  name="full_name" placeholder="Enter Full Name" class="name">
+            </div>
+            <div class="email">
+                <input type="text" name="from_email" placeholder="E-mail address" class="mail" required>
+            </div>
+             <div class="phone">
+                <input type="number" name="phone" placeholder="Enter Phone number" class="phone-number" required>
+            </div>
+
+            <div class="gender-box">
+                <h2>Gender</h2>
+                <div class="gender-option">
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" value="Male">>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check-female" name="gender" value="Female">>
+                        <label for="check-female">Female</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="date">
+                <div class="birth">
+                <input type="date" placeholder="Date of birth  (mm/dd/yy)"  name="dob" class="dob" required>
+            </div>
+            <div class="therapy">
+                <select name="therapy_type" required>
+                    <option hidden>Therapy type</option>
+                    <option value="Brachytherapy">Brachytherapy</option>
+                    <option value="Teletherapy">Teletherapy</option>
+                </select>
+            </div>
+            </div>
+
+             <div class="receiver-mail">
+                <input type="email"  name="to_email"  placeholder="Destination mail" class="receiver" required>
+            </div>
+             <div class="reason">
+                <input type="text" name="reason"  placeholder="Purpose of appointment" class="visit" required>
+            </div>
+            <div class="button">
+                <button class="submit">Submit</button>
+            </div>
+        </div>
+        </form>
+                
+    </div>
+    
+</body>
+</html>
